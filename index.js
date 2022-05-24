@@ -32,6 +32,5 @@ window.onload = () => {
 };
 
 
-/* ARROW FUNCTION VS FUNCTION 
-    QUAL*/ 
+
 
