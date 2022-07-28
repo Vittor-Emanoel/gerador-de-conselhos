@@ -1,5 +1,4 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
 
 * {
@@ -29,6 +28,7 @@ body{
     
     background-color: var(--Dark-Blue);
 }
+
 .card {
     background-color: var(--Dark-Grayish-Blue);
    
@@ -120,5 +120,6 @@ button:hover {
     }
     footer{
        text-align: center;
+        
     }
 }
