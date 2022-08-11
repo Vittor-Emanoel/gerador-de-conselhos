@@ -1,19 +1,16 @@
-//seletores:
-
-const adviceContent = document.querySelector(".content");
-const adviceNumber = document.querySelector(".advice-num");
-
 const btn = document.querySelector("#btn-advice");
+  btn.addEventListener("click", Advice);
+      const adviceContent = document.querySelector(".content");
+       const adviceNumber = document.querySelector(".advice-num");
 
-//evento de clique que aciona a função:
-
-btn.addEventListener("click", Advice);
-
-//função
-function Advice() {
-  fetch("	https://api.adviceslip.com/advice")
-    .then((response) => {
-      return response.json();
+      function Advice() {
+        fetch("https://api.adviceslip.com/advice")
+          .then((response) => {
+            if(response.status == 200){
+              return response.json();
+            }else{
+              alert('API com problemas!');
+          }
     })
     .then((adviceData) => {
       const adviceNum = adviceData.slip.id;
@@ -30,7 +27,3 @@ function Advice() {
 window.onload = () => {
   Advice();
 };
-
-
-
-
